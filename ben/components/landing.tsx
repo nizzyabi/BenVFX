@@ -6,7 +6,40 @@ import { useEffect } from 'react';
 import { Particles } from "@/components/particles";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight } from 'lucide-react';
+import {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+  } from "@/components/ui/avatar"
 
+const channels = [
+    {
+        logo: '/alpha.jpeg',
+        name: 'Alpha Central',
+        subs: '200,000',
+    },
+    {
+        logo: '/frazer.jpeg',
+        name: 'Frazer Brookes',
+        subs: '70,000',
+    },
+    {
+        logo: '/dan.jpg',
+        name: 'Dan Kieft',
+        subs: '14,000',
+    },
+    {
+        logo: '/joe.jpeg',
+        name: 'Joe Leech',
+        subs: '13,000',
+    },
+    {
+        logo: '/nizar.png',
+        name: 'Nizar',
+        subs: '5,000',
+    },
+
+]
 export const LandingPage = () => {
     useEffect(() => {
         AOS.init({
@@ -59,8 +92,40 @@ export const LandingPage = () => {
                 </div>
 
                 <div>
-                    <div></div>
+                    <div className="mt-10 flex space-x-8">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-0DXrOIN_c?si=AFGQCz5MtkJhraa5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-0DXrOIN_c?si=AFGQCz5MtkJhraa5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
+                    </div>
                 </div>
+                <div className="max-w-8xl">
+                    <div className="mt-10 flex space-x-8">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-0DXrOIN_c?si=AFGQCz5MtkJhraa5" 
+                    
+                        title="YouTube video player" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-0DXrOIN_c?si=AFGQCz5MtkJhraa5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div className="text-center">
+                <h1 className="pb-4 font-bold tracking-tight text-5xl lg:text-6xl ">Channels I've Worked With</h1>
+                <div className="flex items-center justify-center">
+                    <Separator className="mt-3 bg-slate-100/20 h-0.5 w-40" />
+                </div>
+               
+                {channels.map((channel, index) => (
+                    <div key={index} className="mt-10 flex items-center text-center space-x-8">
+                        <Avatar className="flex flex-col">
+                            <AvatarImage src={channel.logo} alt={channel.name} height='12' width='12'/>
+                            <AvatarFallback>{channel.name}</AvatarFallback>
+                        </Avatar>
+                        <div className="flex flex-col">
+                            <h1 className="font-bold text-2xl">{channel.name}</h1>
+                            <p className="text-lg">{channel.subs} Subscribers</p>
+                        </div>
+                    </div>
+                ))}
+               
             </div>
         </div>
     );
