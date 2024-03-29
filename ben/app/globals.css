@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {  background-image:
+  radial-gradient(circle at center, rgba(255, 255, 255, 0.00) 0, #ffffff05 1px, transparent 1px),
+  linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  color: white;
+  background-size: 10px 10px;
+  background-attachment: fixed;
+  background-color: #08131f;
+}
