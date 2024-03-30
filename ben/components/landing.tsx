@@ -6,39 +6,34 @@ import { useEffect } from 'react';
 import { Particles } from "@/components/particles";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight } from 'lucide-react';
-import {
-    Avatar,
-    AvatarFallback,
-    AvatarImage,
-  } from "@/components/ui/avatar"
+import { Avatar } from '@mui/material';
+import { InlineWidget } from "react-calendly";
 
 const channels = [
     {
         logo: '/alpha.jpeg',
-        name: 'Alpha Central',
+        name: 'Alpha',
         subs: '200,000',
+        link: 'https://www.youtube.com/@AlphaCentralOfficial'
     },
     {
         logo: '/frazer.jpeg',
-        name: 'Frazer Brookes',
+        name: 'Brookes',
         subs: '70,000',
+        link: 'https://www.youtube.com/@FrazerBrookesChannel'
     },
     {
         logo: '/dan.jpg',
         name: 'Dan Kieft',
         subs: '14,000',
+        link: 'https://www.youtube.com/@Dankieft'
     },
     {
         logo: '/joe.jpeg',
         name: 'Joe Leech',
-        subs: '13,000',
+        subs: '30,000',
+        link: 'https://www.youtube.com/@Joe_Leech'
     },
-    {
-        logo: '/nizar.png',
-        name: 'Nizar',
-        subs: '5,000',
-    },
-
 ]
 export const LandingPage = () => {
     useEffect(() => {
@@ -50,6 +45,8 @@ export const LandingPage = () => {
       }, []);
     return (
         <div className="pt-32 pb-16 md:pt-52 md:pb-32 relative max-w-5xl min-h-screen px-4 mx-auto sm:px-6 space-y-80">
+
+            {/* Hero */}
             <div>
                 <Particles className="absolute inset-0 -z-10 " />
                 <div className="text-center px-8">
@@ -70,9 +67,9 @@ export const LandingPage = () => {
                         </div>
                     </div>
                     <h1 className="pb-4 font-extrabold tracking-tight text-transparent text-7xl lg:text-8xl  bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400" data-aos="fade-down">
-                        I take the worry out of editing
+                        Take the worry out of editing
                     </h1>
-                    <p className="mb-8 text-lg text-zinc-300/40 font-medium" data-aos="fade-down" data-aos-delay="200">Transform your videos with Retention based editing </p>
+                    <p className="mb-8 text-lg text-zinc-300/40 font-medium" data-aos="fade-down" data-aos-delay="200">Transform your videos with retention based editing</p>
                     <div className="flex flex-col items-center max-w-xs mx-auto gap-4 sm:max-w-none  sm:justify-center sm:flex-row sm:inline-flex" data-aos="fade-down"
                     data-aos-delay="400">
                         <Link
@@ -84,7 +81,8 @@ export const LandingPage = () => {
                     </div>
                 </div>
             </div>
-        
+
+            {/* Edited Videos*/}
             <div className="text-center" id='edited'>
                 <h1 className="pb-4 font-bold tracking-tight text-5xl lg:text-6xl ">Videos I've edited</h1>
                 <div className="flex items-center justify-center">
@@ -93,39 +91,49 @@ export const LandingPage = () => {
 
                 <div>
                     <div className="mt-10 flex space-x-8">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-0DXrOIN_c?si=AFGQCz5MtkJhraa5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-0DXrOIN_c?si=AFGQCz5MtkJhraa5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/k-XlqnNT_Xk?si=zvl3SqgWKVvpoaVA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
+                    
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SjqmjAq2YAE?si=O0QiJ-hWkrGyXDNK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
                     </div>
                 </div>
-                <div className="max-w-8xl">
+                <div className="l">
                     <div className="mt-10 flex space-x-8">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-0DXrOIN_c?si=AFGQCz5MtkJhraa5" 
-                    
-                        title="YouTube video player" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X-0DXrOIN_c?si=AFGQCz5MtkJhraa5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Siexk0ZFKCw?si=4_Rulc4o8Iwc2rub" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="border border-slate-100/40 rounded-[5px]"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/C0cbOOecml8?si=XHtTmV_GJfhq2NL9" allow="autoplay; fullscreen" className="border border-slate-100/40 rounded-[5px]"></iframe>
                     </div>
                 </div>
             </div>
 
+            {/* Channels Worked With*/}
             <div className="text-center">
                 <h1 className="pb-4 font-bold tracking-tight text-5xl lg:text-6xl ">Channels I've Worked With</h1>
                 <div className="flex items-center justify-center">
                     <Separator className="mt-3 bg-slate-100/20 h-0.5 w-40" />
                 </div>
                
+               <div className="flex items-center justify-center mx-auto sm:space-x-2 md:space-x-4 lg:space-x-8">
                 {channels.map((channel, index) => (
-                    <div key={index} className="mt-10 flex items-center text-center space-x-8">
-                        <Avatar className="flex flex-col">
-                            <AvatarImage src={channel.logo} alt={channel.name} height='12' width='12'/>
-                            <AvatarFallback>{channel.name}</AvatarFallback>
-                        </Avatar>
-                        <div className="flex flex-col">
-                            <h1 className="font-bold text-2xl">{channel.name}</h1>
-                            <p className="text-lg">{channel.subs} Subscribers</p>
+                    <div key={index} className="mt-10 flex">
+                        <div className="flex flex-col items-center">
+                            <Link href={`${channel.link}`}>
+                            <Avatar src={channel.logo} alt={channel.name} sx={{width: 100, height: 100}}/>
+                            </Link>
+                            <h1 className="font-semibold text-xl mt-4">{channel.name}</h1>
+                            <p className="text-lg mt-2">{channel.subs} subs</p>
                         </div>
                     </div>
                 ))}
-               
+                </div>
+            </div>
+
+            {/* Calendly Booking Page*/}
+            <div className="text-center">
+                <h1 className="pb-4 font-bold tracking-tight text-4xl lg:text-4xl">Ready to Transform Your Content? <br/> Book a Free Editing Consultation Below!</h1>
+                <div className="flex items-center justify-center">
+                    <Separator className="mt-3 bg-slate-100/20 h-0.5 w-40" />
+                </div>
+                <InlineWidget url="https://calendly.com/nizabizaher/programming-tutoring-consultation" styles={{"height": "1000px", "borderRadius": "5px"}}/>
+                
             </div>
         </div>
     );
