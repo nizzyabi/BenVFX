@@ -25,6 +25,7 @@
     "react": "^18",
     "react-calendly": "^4.3.0",
     "react-dom": "^18",
+    "react-youtube": "^10.1.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"
   },
