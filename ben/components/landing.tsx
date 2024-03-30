@@ -62,6 +62,20 @@ export const LandingPage = () => {
             link: 'https://www.youtube.com/@Joe_Leech'
         },
     ]
+    // Avatar Styles
+    const style = {
+        width: {
+          xs: 50, // width on extra-small devices
+          sm: 100, // width on small devices
+          md: 150, // default width
+        },
+        height: {
+          xs: 50, // height on extra-small devices
+          sm: 100, // height on small devices
+          md: 150, // default height
+        },
+        // You can add more responsive keys (lg, xl) as needed
+      };
     return (
         <div className="pt-32 pb-16 md:pt-52 md:pb-32 relative max-w-5xl min-h-screen px-4 mx-auto sm:px-6 space-y-80">
 
@@ -132,7 +146,7 @@ export const LandingPage = () => {
                     <div key={index} className="mt-10 flex">
                         <div className="flex flex-col items-center">
                             <Link href={`${channel.link}`}>
-                            <Avatar src={channel.logo} alt={channel.name} sx={{width: 150, height: 150}}/>
+                            <Avatar src={channel.logo} alt={channel.name} sx={style}/>
                             </Link>
                             <h1 className="font-semibold text-xl mt-4">{channel.name}</h1>
                             <p className="text-lg mt-2">{channel.subs} subs</p>
